@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="bk_iss" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0"
+            style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="Controller.BookIssueFormController">
+    <children>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="36.0" layoutY="25.0" onMouseClicked="#back_click"
+                   onMouseExited="#playMouseEnterAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/back.png"/>
+            </image>
+        </ImageView>
+        <Text layoutX="293.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Issue">
+            <font>
+                <Font size="28.0"/>
+            </font>
+        </Text>
+        <ImageView fitHeight="91.0" fitWidth="98.0" layoutX="184.0" layoutY="50.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../Images/issue.png"/>
+            </image>
+        </ImageView>
+        <Pane layoutX="-1.0" layoutY="1.0" prefHeight="600.0" prefWidth="12.0" style="-fx-background-color: #3498db;"/>
+        <Pane layoutX="589.0" prefHeight="600.0" prefWidth="12.0" style="-fx-background-color: #2c3e50;"/>
+        <JFXTextField fx:id="txt_issid" layoutX="142.0" layoutY="176.0" prefHeight="25.0" prefWidth="320.0"
+                      promptText="Issue ID :"/>
+        <JFXDatePicker fx:id="txt_isu_date" layoutX="140.0" layoutY="201.0" prefHeight="28.0" prefWidth="353.0"
+                       promptText="Issue Date"/>
+        <JFXTextField fx:id="txt_name" layoutX="325.0" layoutY="237.0" prefHeight="25.0" prefWidth="135.0"
+                      promptText="Name"/>
+        <JFXTextField fx:id="txt_title" layoutX="325.0" layoutY="272.0" prefHeight="25.0" prefWidth="135.0"
+                      promptText="Title"/>
+        <JFXComboBox fx:id="mem_is_id" layoutX="140.0" layoutY="237.0" prefHeight="25.0" prefWidth="135.0"
+                     promptText="Member ID  :"/>
+        <JFXComboBox fx:id="book_id" layoutX="140.0" layoutY="272.0" prefHeight="25.0" prefWidth="135.0"
+                     promptText="Book ID :"/>
+        <JFXButton layoutX="125.0" layoutY="323.0" onAction="#new_action" prefHeight="25.0" prefWidth="91.0"
+                   style="-fx-background-color: #f1c40f;" text="+New "/>
+        <JFXButton layoutX="247.0" layoutY="323.0" onAction="#add_Action" prefHeight="25.0" prefWidth="91.0"
+                   style="-fx-background-color: #2ecc71;" text="Add"/>
+        <JFXButton layoutX="379.0" layoutY="323.0" onAction="#delete_Action" prefHeight="25.0" prefWidth="91.0"
+                   style="-fx-background-color: #e74c3c;" text="Delete"/>
+        <TableView fx:id="bk_ssue_tbl" layoutX="69.0" layoutY="369.0" prefHeight="200.0" prefWidth="465.0">
+            <columns>
+                <TableColumn fx:id="iss_id" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="iss_date" prefWidth="93.0" text="Date"/>
+                <TableColumn fx:id="mem_name" prefWidth="195.0" text="Member Name"/>
+                <TableColumn fx:id="mem_id" prefWidth="100.0" text="Member ID"/>
+            </columns>
+            <effect>
+                <InnerShadow>
+                    <input>
+                        <DropShadow/>
+                    </input>
+                </InnerShadow>
+            </effect>
+        </TableView>
+        <Pane layoutX="184.0" layoutY="150.0" prefHeight="7.0" prefWidth="236.0"
+              style="-fx-background-color: #2c3e50;"/>
+    </children>
+</AnchorPane>

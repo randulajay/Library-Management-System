@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="bk_root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="Controller.BookFormController">
+    <children>
+        <ImageView fx:id="img_back" fitHeight="40.0" fitWidth="40.0" layoutX="50.0" layoutY="50.0"
+                   onMouseClicked="#img_back" onMouseExited="#playMouseEnterAnimation" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../Images/back.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="77.0" fitWidth="89.0" layoutX="149.0" layoutY="52.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../Images/books.png"/>
+            </image>
+        </ImageView>
+        <Text layoutX="246.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mange Books">
+            <font>
+                <Font size="29.0"/>
+            </font>
+        </Text>
+        <JFXTextField fx:id="txt_bk_id" layoutX="145.0" layoutY="155.0" prefHeight="25.0" prefWidth="310.0"
+                      promptText="Book ID"/>
+        <JFXTextField fx:id="txt_bk_title" layoutX="145.0" layoutY="191.0" prefHeight="25.0" prefWidth="310.0"
+                      promptText="Book Title"/>
+        <JFXTextField fx:id="txt_bk_auth" layoutX="145.0" layoutY="226.0" prefHeight="25.0" prefWidth="310.0"
+                      promptText="Author"/>
+        <JFXTextField fx:id="txt_bk_st" layoutX="145.0" layoutY="266.0" prefHeight="25.0" prefWidth="310.0"
+                      promptText="Status"/>
+        <JFXButton fx:id="btn_new" layoutX="124.0" layoutY="317.0" onAction="#btn_new" prefHeight="25.0"
+                   prefWidth="89.0" style="-fx-background-color: #f1c40f;" text="+New"/>
+        <JFXButton fx:id="btn_add" layoutX="268.0" layoutY="317.0" onAction="#btn_Add" prefHeight="25.0"
+                   prefWidth="89.0" style="-fx-background-color: #2ecc71;" text="Add"/>
+        <JFXButton fx:id="btn_dlt" layoutX="399.0" layoutY="317.0" onAction="#btn_dlt" prefHeight="25.0"
+                   prefWidth="89.0" style="-fx-background-color: #e74c3c;" text="Delete"/>
+        <TableView fx:id="tbl_bk" layoutX="86.0" layoutY="368.0" prefHeight="188.0" prefWidth="454.0">
+            <columns>
+                <TableColumn fx:id="bk_id_col" prefWidth="75.0" text="Id"/>
+                <TableColumn fx:id="bk_title_col" prefWidth="135.0" text="Title"/>
+                <TableColumn fx:id="bk_auth_col" prefWidth="139.0" text="Author"/>
+                <TableColumn fx:id="bk_sts_col" minWidth="0.0" prefWidth="104.0" text="Status"/>
+            </columns>
+            <effect>
+                <InnerShadow/>
+            </effect>
+        </TableView>
+        <Pane layoutX="590.0" prefHeight="600.0" prefWidth="10.0" style="-fx-background-color: #f1c40f;"/>
+        <Pane prefHeight="600.0" prefWidth="10.0" style="-fx-background-color: #d35400;"/>
+        <Pane layoutX="149.0" layoutY="139.0" prefHeight="7.0" prefWidth="294.0"
+              style="-fx-background-color: #2c3e50;"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0"
+            style="-fx-background-color: #ecf0f1; " xmlns="http://javafx.com/javafx/10.0.1"
+            fx:controller="Controller.HomeFormController">
+    <children>
+        <ImageView fx:id="member" fitHeight="100.0" fitWidth="100.0" layoutX="333.0" layoutY="161.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/members.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="books" fitHeight="100.0" fitWidth="100.0" layoutX="81.0" layoutY="349.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/books.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="issue" fitHeight="116.0" fitWidth="127.0" layoutX="247.0" layoutY="338.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/issue.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="bk_return" fitHeight="100.0" fitWidth="100.0" layoutX="421.0" layoutY="349.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/return.png"/>
+            </image>
+        </ImageView>
+        <ImageView fx:id="bk_search" fitHeight="100.0" fitWidth="100.0" layoutX="150.0" layoutY="161.0"
+                   onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation"
+                   onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/search.png"/>
+            </image>
+        </ImageView>
+        <Text fill="#f84838" fontSmoothingType="LCD" layoutX="41.0" layoutY="83.0" strokeType="OUTSIDE"
+              strokeWidth="0.0" text="Library Management" textAlignment="CENTER" wrappingWidth="521.140625">
+            <font>
+                <Font name="Bookman Old Style Bold" size="45.0"/>
+            </font>
+        </Text>
+        <Text fill="#2c3e50" layoutX="355.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Members">
+            <font>
+                <Font name="Britannic Bold" size="14.0"/>
+            </font>
+        </Text>
+        <Text fill="#2c3e50" layoutX="119.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books"
+              textAlignment="CENTER">
+            <font>
+                <Font name="Britannic Bold" size="14.0"/>
+            </font>
+        </Text>
+        <Text fill="#2c3e50" layoutX="267.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Issue">
+            <font>
+                <Font name="Britannic Bold" size="14.0"/>
+            </font>
+        </Text>
+        <Text fill="#2c3e50" layoutX="433.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Returns">
+            <font>
+                <Font name="Britannic Bold" size="14.0"/>
+            </font>
+        </Text>
+        <Text fill="#2c3e50" layoutX="161.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Search">
+            <font>
+                <Font name="Britannic Bold" size="14.0"/>
+            </font>
+        </Text>
+        <Pane prefHeight="600.0" prefWidth="10.0" style="-fx-background-color: #2ecc71;"/>
+        <Pane layoutX="10.0" layoutY="197.0" prefHeight="403.0" prefWidth="10.0"
+              style="-fx-background-color: #f1c40f;"/>
+        <Pane layoutX="590.0" prefHeight="600.0" prefWidth="10.0" style="-fx-background-color: #8e44ad;"/>
+        <Pane layoutX="21.0" layoutY="595.0" prefHeight="5.0" prefWidth="560.0" style="-fx-background-color: #3498db;"/>
+        <Pane layoutX="581.0" layoutY="145.0" prefHeight="455.0" prefWidth="10.0"
+              style="-fx-background-color: #27ae60;"/>
+        <Pane layoutX="119.0" layoutY="106.0" prefHeight="5.0" prefWidth="336.0"
+              style="-fx-background-color: #c0392b;"/>
+    </children>
+</AnchorPane>
